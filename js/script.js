@@ -17,13 +17,14 @@ if (navigator.serviceWorker) {
 }
 
 // main
+
 const getWeather = async (URLAddress) => {
   try {
     const result = await fetch(URLAddress)
     const weatherData = await result.json()
     document.getElementById("weather-text").innerHTML =
       "Weather : " +
-      weatherData.weather.main +
+      weatherData.weather[2] +
       "<br>Temperature : " +
       weatherData.main.temp +
       "<br>Region : " +
