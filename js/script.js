@@ -24,7 +24,7 @@ const getWeather = async (URLAddress) => {
     const weatherData = await result.json()
     document.getElementById("weather-text").innerHTML =
       "Weather : " +
-      weatherData.weather.main +
+      weatherData.weather[0].main + 
       "<br>Temperature : " +
       weatherData.main.temp +
       "<br>Region : " +

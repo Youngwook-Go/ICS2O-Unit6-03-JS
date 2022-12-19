@@ -24,3 +24,10 @@
 body {
   background-color: lightsteelblue;
 }
+
+.weatherInfo {
+  color: black;
+  font: arial;
+  font-size: 16pt;
+  line-height: 24pt;
+}
