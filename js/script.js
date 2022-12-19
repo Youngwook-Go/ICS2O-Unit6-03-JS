@@ -32,7 +32,6 @@ const getWeather = async (URLAddress) => {
       "<br>Weather Icon:<img src= 'http://openweathermap.org/img/wn/" +
       weatherData.weather[0].icon +
       "@2x.png'>"
-    
   } catch (err) {
     console.log(err)
   }
