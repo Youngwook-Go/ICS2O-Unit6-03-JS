@@ -22,12 +22,13 @@ const getWeather = async (URLAddress) => {
   try {
     const result = await fetch(URLAddress)
     const weatherData = await result.json()
+    const celsius = weatherData.main.temp - 273.15
     document.getElementById("weather-text").innerHTML =
       "Weather : " +
       weatherData.weather[0].main +
       "<br>Temperature : " +
-      weatherData.main.temp +
-      "<br>Region : " +
+      celsius.toFixed(2) +
+      " °C<br>Region : " +
       weatherData.sys.country +
       "<br>Weather Icon:<img src= 'http://openweathermap.org/img/wn/" +
       weatherData.weather[0].icon +
